@@ -1,11 +1,16 @@
 body {
   font-family: Arial, sans-serif;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  margin: 5vh;
-  background-color: #f0f0f0;
+  background-color: #ffffff;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* vertical centering */
+  align-items: center;     /* horizontal centering */
+  margin: 0; /* Remove margin to perfectly center */
+}
 
+.w3-container {
+  text-align: center; /* Center text and button inside the container */
 }
 
 .container {
@@ -25,7 +30,7 @@ button {
   cursor: pointer;
   border: none;
   border-radius: 5px;
-  background-color: #007bff;
+  background-color: #555555;
   color: #fff;
   transition: background-color 0.3s;
   width: 220px; /* Set a fixed width */
