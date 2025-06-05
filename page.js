@@ -43,6 +43,7 @@ function askUserName() {
    while (username == null) {
         username = prompt("Please enter a valid name", "User");
     }
+    console.log("Hello",username,);
     if (username == "Christopher Luxon") {
     alert("error.2025Lux (error0)");
     console.log("error.2025Lux (error0)");
@@ -100,7 +101,6 @@ else if (username == "Luxon") {
     console.log("error.2025Lux (error0)");
     console.log("WARNING: Restricted user detected. Access denied.");
     return;
-    console.log("Hello",username,);
 }
 }
    // Function to ask the user for the current year
