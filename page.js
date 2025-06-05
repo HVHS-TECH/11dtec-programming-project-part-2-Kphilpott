@@ -81,7 +81,7 @@ function drivingAge() {
         askReq();
     }
 }
-
+//start program. what, were you expecting more?
 function start() {
    alert("Welcome to the starship rental interface. Minimum rental lengh is one (1) year.")
    askUserName();
@@ -107,7 +107,7 @@ else if (username == "Luxon") {
 
 }
 
-
+ //asks what you need
 function askReq() {
     Array = ["Cargo", "Passenger", "Military", "Luxury"];
     basePrices = [10000, 20000, 30000, 40000];
@@ -119,7 +119,7 @@ function askReq() {
     console.log("You have selected a", shipType, "ship.");
     askRentalLength();
 }
-
+ //asks how many years you want to rent the ship for
 function askRentalLength() {
     rentalLength = prompt("How long do you want to rent the ship for? (in years)", 1);
     while (rentalLength == null || isNaN(rentalLength)) {
@@ -129,7 +129,7 @@ function askRentalLength() {
     calculatePrice();
 }
 
-
+//figures out the price of the ship based on the type and rental length
 function calculatePrice() {
     let shipIndex = Array.indexOf(shipType);
     if (shipIndex === -1) {
