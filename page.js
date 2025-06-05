@@ -36,7 +36,7 @@ console.log()
 /*******************************************
  Functions
  *******************************************/
-   // Function to ask the user for their name and check for restricted names
+   // Function to ask the user for their name, check if restricted, and crash the program if restricted
 var username;
 function askUserName() {
     username = prompt("Welcome to Luna Starships! \nWhat is your name?", "User");
@@ -71,6 +71,7 @@ else if (username == "Luxon") {
     process.exit(1);
 }
 }
+
    // Function to ask the user for the current year
 function askYear() {
     year = prompt("What year is it?", 2079);
