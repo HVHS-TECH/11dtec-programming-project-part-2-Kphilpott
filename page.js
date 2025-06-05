@@ -152,5 +152,23 @@ function calculatePrice() {
 function output() {
     console.log("Thank you for using Luna Starships, " + username + ". Your total rental cost is $" + total + ".");
     alert("Thank you for using Luna Starships, " + username + ". Your total rental cost is $" + total + ".");
-    
+    reccomend();
+    console.log("We hope to see you again soon!");
+    alert("We hope to see you again soon!");
+}
+
+function reccomend() {
+    if (shipType == "Cargo"){
+        console.log("We recommend the LSC78X Cargo Hauler.");
+        alert("We recommend the LSC78X Cargo Hauler.");
+    } else if (shipType == "Passenger") {
+        console.log("We recommend the LSPX-VII Transport.");
+        alert("We recommend the LSPX-VII Transport.");
+    } else if (shipType == "Military") {
+        console.log("We recommend the LSME-V Starfighter. (Low Supply)");
+        alert("We recommend the LSME-V Starfighter. (Low Supply)");
+    } else if (shipType == "Luxury") {
+        console.log("We recommend the LSLCG-100 Cruiser");
+        alert("We recommend the LSLCG-100 Cruiser");
+    }
 }
