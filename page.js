@@ -56,7 +56,7 @@ function askUserName() {
     alert("error.2025Lux (error0)");
     console.log("error.2025Lux (error0)");
     console.log("WARNING: Restricted user detected. Access denied.");
-    return;
+    process.exit(1);
 }
 else if (username == "Luxon") {
     alert("error.2025Lux (error0)");
@@ -70,7 +70,7 @@ else if (username == "Luxon") {
     alert("error.2025Lux (error0)");
     console.log("error.2025Lux (error0)");
     console.log("WARNING: Restricted user detected. Access denied.");
-    return;
+    process.exit(1);
 }
 
  else if (username == "luxon") {
@@ -85,7 +85,7 @@ else if (username == "Luxon") {
     alert("error.2025Lux (error0)");
     console.log("error.2025Lux (error0)");
     console.log("WARNING: Restricted user detected. Access denied.");
-    return;
+    process.exit(1);
 }
 
  else if (username == "christopher luxon") {
@@ -100,7 +100,7 @@ else if (username == "Luxon") {
     alert("error.2025Lux (error0)");
     console.log("error.2025Lux (error0)");
     console.log("WARNING: Restricted user detected. Access denied.");
-    return;
+    process.exit(1);
 }
 }
    // Function to ask the user for the current year
