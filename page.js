@@ -95,15 +95,23 @@ if (age < 25) {
 
 
  if (username == "Christopher Luxon") {
-    console.log("You are a Idiot");}
+    console.log("You are a Idiot");
+    return;
+}
 else if (username == "Luxon") {
-    console.log("You are a Idiot");}
+    console.log("You are a Idiot");
+return;
+}
 
  else if (username == "luxon") {
-    console.log("You are a Idiot");}
+    console.log("You are a Idiot");
+return;
+}
 
- else if (username == "christopher uxon") {
-    console.log("You are a Idiot");}
+ else if (username == "christopher luxon") {
+    console.log("You are a Idiot");
+return;
+}
 
 }
 
