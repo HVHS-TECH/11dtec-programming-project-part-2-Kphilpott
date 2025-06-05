@@ -36,65 +36,14 @@ console.log()
 /*******************************************
  Functions
  *******************************************/
-   // Function to ask the user for their name
+   // Function to ask the user for their name and check for restricted names
 var username;
 function askUserName() {
     username = prompt("Welcome to Luna Starships! \nWhat is your name?", "User");
    while (username == null) {
         username = prompt("Please enter a valid name", "User");
     }
-    console.log("Hello",username,);
-}
-   // Function to ask the user for the current year
-function askYear() {
-    year = prompt("What year is it?", 2079);
-    while (year == null) {
-        year = prompt("Please enter a valid year", 2079);
-    }
-    while (year < 2079) {
-        year = prompt("Please enter a valid year", 2079);
-    }
-}
-
-   // Function to ask the user for their age
-
-function askUserAge() {
-    age = prompt("Please enter your age " + username, 25);
-   while (age == null) {
-        age = prompt("Please enter a valid age", 25);
-    }
-}
-
-function ageMaths() {
-    console.log("You were born in" ,year - age)
-}
-
-    // Function to check if the user is old enough to pilot a ship
-
-function drivingAge() {
-    if (age < DRIVINGAGE) {
-        alert("You are not old enough to fly our ships");
-        return;
-    }
-    else {
-        alert("You are old enough to fly our ships, proceeding with rental process.");
-        askReq();
-    }
-}
-//start program. what, were you expecting more? oh yeah, it also kicks christopher luxon out of the program
-function start() {
-   alert("Welcome to the starship rental interface. Minimum rental lengh is one (1) year.\nPlease note that you must be at least 25 years old to rent a ship.\n\nWARNING: Four (4) ship types avalible");
-   askUserName();
-   askYear();
-   askUserAge();
-   ageMaths();
-   drivingAge();
-
-if (age < 25) {
-    console.log("You are not yet old enough to fly with us, please come back later.");}
-
-
- if (username == "Christopher Luxon") {
+    if (username == "Christopher Luxon") {
     alert("error.2025Lux (error0)");
     console.log("error.2025Lux (error0)");
     alert("error.2025Lux (error0)");
@@ -151,9 +100,61 @@ else if (username == "Luxon") {
     console.log("error.2025Lux (error0)");
     console.log("WARNING: Restricted user detected. Access denied.");
     return;
+    console.log("Hello",username,);
+}
+}
+   // Function to ask the user for the current year
+function askYear() {
+    year = prompt("What year is it?", 2079);
+    while (year == null) {
+        year = prompt("Please enter a valid year", 2079);
+    }
+    while (year < 2079) {
+        year = prompt("Please enter a valid year", 2079);
+    }
 }
 
+   // Function to ask the user for their age
+
+function askUserAge() {
+    age = prompt("Please enter your age " + username, 25);
+   while (age == null) {
+        age = prompt("Please enter a valid age", 25);
+    }
 }
+
+function ageMaths() {
+    console.log("You were born in" ,year - age)
+}
+
+    // Function to check if the user is old enough to pilot a ship
+
+function drivingAge() {
+    if (age < DRIVINGAGE) {
+        alert("You are not old enough to fly our ships");
+        return;
+    }
+    else {
+        alert("You are old enough to fly our ships, proceeding with rental process.");
+        askReq();
+    }
+}
+//start program. what, were you expecting more?
+function start() {
+   alert("Welcome to the starship rental interface. Minimum rental lengh is one (1) year.\nPlease note that you must be at least 25 years old to rent a ship.\n\nWARNING: Four (4) ship types avalible");
+   askUserName();
+   askYear();
+   askUserAge();
+   ageMaths();
+   drivingAge();
+
+if (age < 25) {
+    console.log("You are not yet old enough to fly with us, please come back later.");}
+
+
+ 
+}
+
 
  //asks what you need and recommends a ship based on the type
 function askReq() {
