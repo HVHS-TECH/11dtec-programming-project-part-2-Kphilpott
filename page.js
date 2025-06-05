@@ -47,26 +47,10 @@ function askUserName() {
     if (username == "Christopher Luxon") {
     alert("error.2025Lux (error0)");
     console.log("error.2025Lux (error0)");
-    alert("error.2025Lux (error0)");
-    console.log("error.2025Lux (error0)");
-    alert("error.2025Lux (error0)");
-    console.log("error.2025Lux (error0)");
-    alert("error.2025Lux (error0)");
-    console.log("error.2025Lux (error0)");
-    alert("error.2025Lux (error0)");
-    console.log("error.2025Lux (error0)");
     console.log("WARNING: Restricted user detected. Access denied.");
     process.exit(1);
 }
 else if (username == "Luxon") {
-    alert("error.2025Lux (error0)");
-    console.log("error.2025Lux (error0)");
-    alert("error.2025Lux (error0)");
-    console.log("error.2025Lux (error0)");
-    alert("error.2025Lux (error0)");
-    console.log("error.2025Lux (error0)");
-    alert("error.2025Lux (error0)");
-    console.log("error.2025Lux (error0)");
     alert("error.2025Lux (error0)");
     console.log("error.2025Lux (error0)");
     console.log("WARNING: Restricted user detected. Access denied.");
@@ -76,27 +60,11 @@ else if (username == "Luxon") {
  else if (username == "luxon") {
     alert("error.2025Lux (error0)");
     console.log("error.2025Lux (error0)");
-    alert("error.2025Lux (error0)");
-    console.log("error.2025Lux (error0)");
-    alert("error.2025Lux (error0)");
-    console.log("error.2025Lux (error0)");
-    alert("error.2025Lux (error0)");
-    console.log("error.2025Lux (error0)");
-    alert("error.2025Lux (error0)");
-    console.log("error.2025Lux (error0)");
     console.log("WARNING: Restricted user detected. Access denied.");
     process.exit(1);
 }
 
  else if (username == "christopher luxon") {
-    alert("error.2025Lux (error0)");
-    console.log("error.2025Lux (error0)");
-    alert("error.2025Lux (error0)");
-    console.log("error.2025Lux (error0)");
-    alert("error.2025Lux (error0)");
-    console.log("error.2025Lux (error0)");
-    alert("error.2025Lux (error0)");
-    console.log("error.2025Lux (error0)");
     alert("error.2025Lux (error0)");
     console.log("error.2025Lux (error0)");
     console.log("WARNING: Restricted user detected. Access denied.");
