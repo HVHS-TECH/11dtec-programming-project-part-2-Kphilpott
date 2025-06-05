@@ -83,7 +83,7 @@ function drivingAge() {
 }
 //start program. what, were you expecting more?
 function start() {
-   alert("Welcome to the starship rental interface. Minimum rental lengh is one (1) year.")
+   alert("Welcome to the starship rental interface. Minimum rental lengh is one (1) year.\nPlease note that you must be at least 25 years old to rent a ship.\n\nWARNING: Four (4) ship types avalible");
    askUserName();
    askYear();
    askUserAge();
@@ -115,7 +115,7 @@ return;
 
 }
 
- //asks what you need
+ //asks what you need and recommends a ship based on the type
 function askReq() {
     Array = ["Cargo", "Passenger", "Military", "Luxury"];
     basePrices = [10000, 20000, 30000, 40000];
@@ -126,6 +126,19 @@ function askReq() {
     }
     console.log("You have selected a", shipType, "ship.");
     askRentalLength();
+    if (shipType == "Cargo"){
+        console.log("We recommend the LSC78X Cargo Hauler.");
+        alert("We recommend the LSC78X Cargo Hauler.");
+    } else if (shipType == "Passenger") {
+        console.log("We recommend the LSPX-VII Transport.");
+        alert("We recommend the LSPX-VII Transport.");
+    } else if (shipType == "Military") {
+        console.log("We recommend the LSME-V Starfighter. (Low Supply)");
+        alert("We recommend the LSME-V Starfighter. (Low Supply)");
+    } else if (shipType == "Luxury") {
+        console.log("We recommend the LSLCG-100 Cruiser");
+        alert("We recommend the LSLCG-100 Cruiser");
+    }
 }
  //asks how many years you want to rent the ship for
 function askRentalLength() {
@@ -148,27 +161,11 @@ function calculatePrice() {
     console.log("The total cost for renting a", shipType, "ship for", rentalLength, "years is $", total);
     alert("The total cost for renting a " + shipType + " ship for " + rentalLength + " years is $" + total);
 }
-
+//output function to display the final message
 function output() {
     console.log("Thank you for using Luna Starships, " + username + ". Your total rental cost is $" + total + ".");
     alert("Thank you for using Luna Starships, " + username + ". Your total rental cost is $" + total + ".");
-    reccomend();
     console.log("We hope to see you again soon!");
     alert("We hope to see you again soon!");
 }
 
-function reccomend() {
-    if (shipType == "Cargo"){
-        console.log("We recommend the LSC78X Cargo Hauler.");
-        alert("We recommend the LSC78X Cargo Hauler.");
-    } else if (shipType == "Passenger") {
-        console.log("We recommend the LSPX-VII Transport.");
-        alert("We recommend the LSPX-VII Transport.");
-    } else if (shipType == "Military") {
-        console.log("We recommend the LSME-V Starfighter. (Low Supply)");
-        alert("We recommend the LSME-V Starfighter. (Low Supply)");
-    } else if (shipType == "Luxury") {
-        console.log("We recommend the LSLCG-100 Cruiser");
-        alert("We recommend the LSLCG-100 Cruiser");
-    }
-}
