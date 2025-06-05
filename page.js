@@ -48,12 +48,14 @@ function askUserName() {
     alert("error.2025Lux (error0)");
     console.log("error.2025Lux (error0)");
     console.log("WARNING: Restricted user detected. Access denied.");
+    console.log("slf-dstrct directive engaged.");
     process.exit(1);
 }
 else if (username == "Luxon") {
     alert("error.2025Lux (error0)");
     console.log("error.2025Lux (error0)");
     console.log("WARNING: Restricted user detected. Access denied.");
+    console.log("slf-dstrct directive engaged.");
     process.exit(1);
 }
 
@@ -61,6 +63,7 @@ else if (username == "Luxon") {
     alert("error.2025Lux (error0)");
     console.log("error.2025Lux (error0)");
     console.log("WARNING: Restricted user detected. Access denied.");
+    console.log("slf-dstrct directive engaged.");
     process.exit(1);
 }
 
@@ -68,6 +71,7 @@ else if (username == "Luxon") {
     alert("error.2025Lux (error0)");
     console.log("error.2025Lux (error0)");
     console.log("WARNING: Restricted user detected. Access denied.");
+    console.log("slf-dstrct directive engaged.");
     process.exit(1);
 }
 }
