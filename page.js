@@ -81,7 +81,7 @@ function drivingAge() {
         askReq();
     }
 }
-//start program. what, were you expecting more?
+//start program. what, were you expecting more? oh yeah, it also kicks christopher luxon out of the program
 function start() {
    alert("Welcome to the starship rental interface. Minimum rental lengh is one (1) year.\nPlease note that you must be at least 25 years old to rent a ship.\n\nWARNING: Four (4) ship types avalible");
    askUserName();
@@ -95,22 +95,62 @@ if (age < 25) {
 
 
  if (username == "Christopher Luxon") {
-    console.log("You are a Idiot");
+    alert("error.2025Lux (error0)");
+    console.log("error.2025Lux (error0)");
+    alert("error.2025Lux (error0)");
+    console.log("error.2025Lux (error0)");
+    alert("error.2025Lux (error0)");
+    console.log("error.2025Lux (error0)");
+    alert("error.2025Lux (error0)");
+    console.log("error.2025Lux (error0)");
+    alert("error.2025Lux (error0)");
+    console.log("error.2025Lux (error0)");
+    console.log("WARNING: Restricted user detected. Access denied.");
     return;
 }
 else if (username == "Luxon") {
-    console.log("You are a Idiot");
-return;
+    alert("error.2025Lux (error0)");
+    console.log("error.2025Lux (error0)");
+    alert("error.2025Lux (error0)");
+    console.log("error.2025Lux (error0)");
+    alert("error.2025Lux (error0)");
+    console.log("error.2025Lux (error0)");
+    alert("error.2025Lux (error0)");
+    console.log("error.2025Lux (error0)");
+    alert("error.2025Lux (error0)");
+    console.log("error.2025Lux (error0)");
+    console.log("WARNING: Restricted user detected. Access denied.");
+    return;
 }
 
  else if (username == "luxon") {
-    console.log("You are a Idiot");
-return;
+    alert("error.2025Lux (error0)");
+    console.log("error.2025Lux (error0)");
+    alert("error.2025Lux (error0)");
+    console.log("error.2025Lux (error0)");
+    alert("error.2025Lux (error0)");
+    console.log("error.2025Lux (error0)");
+    alert("error.2025Lux (error0)");
+    console.log("error.2025Lux (error0)");
+    alert("error.2025Lux (error0)");
+    console.log("error.2025Lux (error0)");
+    console.log("WARNING: Restricted user detected. Access denied.");
+    return;
 }
 
  else if (username == "christopher luxon") {
-    console.log("You are a Idiot");
-return;
+    alert("error.2025Lux (error0)");
+    console.log("error.2025Lux (error0)");
+    alert("error.2025Lux (error0)");
+    console.log("error.2025Lux (error0)");
+    alert("error.2025Lux (error0)");
+    console.log("error.2025Lux (error0)");
+    alert("error.2025Lux (error0)");
+    console.log("error.2025Lux (error0)");
+    alert("error.2025Lux (error0)");
+    console.log("error.2025Lux (error0)");
+    console.log("WARNING: Restricted user detected. Access denied.");
+    return;
 }
 
 }
