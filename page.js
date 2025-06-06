@@ -184,7 +184,9 @@ function calculatePrice() {
     console.log("The total cost for renting a", shipType, "ship for", rentalLength, "years is $", total);
     alert("The total cost for renting a " + shipType + " ship for " + rentalLength + " years is $" + total);
 
-    
+    if (total > 10000000) {
+    expensiveShips();
+    }
 
 }
 //output function to display the final message
@@ -201,4 +203,38 @@ function output() {
 function selfDestruct() {
     console.log("Self-Destruct sequence initiated.");
     process.exit(0);
+}
+
+function expensiveShips() {
+    Array = ["Cargo", "cargo", "Passenger", "passenger", "Military", "military", "luxury", "Luxury"];
+    expPrices = [1000000, 1000000, 2000000, 2000000, 3000000, 3000000, 4000000, 4000000];
+    alert("We have the following ship types available for rental: Cargo. Passenger. Military. Luxury", Array.join(", "));
+    shipTypeexp = prompt("What type of ship would you like to rent? (Cargo, Passenger, Military, Luxury)", "Cargo");
+    while (!Array.includes(shipTypeexp)) {
+        shipTypeexp = prompt("Please enter a valid ship type (Cargo, Passenger, Military, Luxury)", "Cargo");
+    }
+    console.log("You have selected a", shipTypeexp, "ship.");
+    askRentalLengthEXP();
+}
+
+function askRentalLengthEXP() {
+    rentalLengthexp = prompt("How long do you want to rent the ship for? (in years)", 1);
+    while (rentalLengthexp == null || isNaN(rentalLengthexp)) {
+        rentalLengthexp = prompt("Please enter a valid rental length", 1);
+    }
+    console.log("You have requested to rent the ship for", rentalLengthexp, "years.");
+    calculatePrice();
+}
+
+function calculatePrice() {
+    let shipIndexexp = Array.indexOf(shipTypeexp);
+    if (shipIndexexp === -1) {
+        alert("Invalid ship type selected.");
+        return;
+    }
+    totalexp = expPrices[shipIndexexp] * rentalLengthexp;
+    console.log("The total cost for renting a", shipTypeexp, "ship for", rentalLengthexp, "years is $", totalexp);
+    alert("The total cost for renting a " + shipTypeexp + " ship for " + rentalLengthexp + " years is $" + totalexp);
+
+
 }
