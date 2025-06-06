@@ -173,7 +173,7 @@ function askRentalLength() {
     calculatePrice();
 }
 
-//figures out the price of the ship based on the type and rental length
+//figures out the price of the ship based on the type and rental length, detects high-value buy/rent attempts and redirects to expensive ships section if needed
 function calculatePrice() {
     let shipIndex = Array.indexOf(shipType);
     if (shipIndex === -1) {
@@ -193,6 +193,7 @@ function calculatePrice() {
         output();
     }
 }
+
 //output function to display the final message
 function output() {
     console.log("Thank you for using Luna Starships, " + username + ". Your total rental cost is $" + total + ".");
@@ -202,13 +203,8 @@ function output() {
 }
 
 
-
-
-function selfDestruct() {
-    console.log("Self-Destruct sequence initiated.");
-    process.exit(0);
-}
-
+//Starts expensive ships section
+//This section is for ships that cost more than 10 million credits/dollars(NZD) to rent
 function expensiveShips() {
     Array = ["Cargo", "cargo", "Passenger", "passenger", "Military", "military", "luxury", "Luxury"];
     expPrices = [1000000, 1000000, 2000000, 2000000, 3000000, 3000000, 4000000, 4000000];
@@ -219,23 +215,24 @@ function expensiveShips() {
     }
     console.log("You have selected a", shipTypeexp, "ship.");
     askRentalLengthEXP();
-    if (shipType == "Cargo" || shipType == "cargo") {
+    if (shipTypeexp == "Cargo" || shipTypeexp == "cargo") {
         console.log("We recommend the LSCXL998 Maximus Cargo Hauler.");
         alert("We recommend the LSCXL998 Maximus Cargo Hauler.");
-    } else if (shipType == "Passenger" || shipType == "passenger") {
+    } else if (shipTypeexp == "Passenger" || shipTypeexp == "passenger") {
         console.log("We recommend the NZICC Type 50 Intersystem Transport.");
         alert("We recommend the NZICC Type 50 Intersystem Transport.");
-    } else if (shipType == "Military" || shipType == "military") {
+    } else if (shipTypeexp == "Military" || shipTypeexp == "military") {
         console.log("We recommend the NZHS Type-V 'Imperium' Battlecruiser. (One Available)");
         console.log("Suspicious purchase detected. Logging Space-Time coordinates, biodata and funds available.");
         alert("We recommend the NZHS Type-V 'Imperium' Battlecruiser. (One Available)");
-    } else if (shipType == "Luxury" || shipType == "luxury") {
+    } else if (shipTypeexp == "Luxury" || shipTypeexp == "luxury") {
         console.log("We recommend the LSNZLSE-1000 'Elysium' Luxury Galaxy Cruiser");
         alert("We recommend the LSNZLSE-1000 'Elysium' Luxury Galaxy Cruiser");
     }
     outputEXP();
 }
 
+//asks how many years you want to rent the ship for in the expensive ships section
 function askRentalLengthEXP() {
     rentalLengthexp = prompt("How long do you want to rent the ship for? (in years)", 25);
     while (rentalLengthexp == null || isNaN(rentalLengthexp)  || rentalLengthexp < 25) {
@@ -245,6 +242,7 @@ function askRentalLengthEXP() {
     calculatePriceEXP();
 }
 
+//figures out the price of the ship based on the type and rental length in the expensive ships section
 function calculatePriceEXP() {
     let shipIndexexp = Array.indexOf(shipTypeexp);
     if (shipIndexexp === -1) {
@@ -256,9 +254,51 @@ function calculatePriceEXP() {
     alert("The total cost for renting a " + shipTypeexp + " ship for " + rentalLengthexp + " years is $" + totalexp);
 }
 
+//output function to display the final message in the expensive ships section
 function outputEXP() {
     console.log("Thank you for using Luna Starships, " + username + ". Your total rental cost is $" + totalexp + ".");
     alert("Thank you for using Luna Starships, " + username + ". Your total rental cost is $" + totalexp + ".");
     console.log("We hope to see you again soon!");
     alert("We hope to see you again soon!");
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//What it says on the tin
+function selfDestruct() {
+    console.log("Self-Destruct sequence initiated.");
+    process.exit(0);
 }
