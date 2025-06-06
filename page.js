@@ -143,7 +143,7 @@ function askReq() {
     Array = ["Cargo", "cargo", "Passenger", "passenger", "Military", "military", "luxury", "Luxury"];
     basePrices = [10000, 10000, 20000, 20000, 30000, 30000, 40000, 40000];
     alert("We have the following ship types available for rental: Cargo. Passenger. Military. Luxury", Array.join(", "));
-    shipType = prompt("What type of ship would you like to rent? (Cargo, Passenger, Military, Luxury)", "Cargo");
+    shipType = prompt("What type of ship would you like to rent? (Cargo, Passenger, Military, Luxury)\nPlease note if above 10 million creadits/NZD the program will reroute to expensive ships selection.", "Cargo");
     while (!Array.includes(shipType)) {
         shipType = prompt("Please enter a valid ship type (Cargo, Passenger, Military, Luxury)", "Cargo");
     }
