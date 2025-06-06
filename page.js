@@ -162,7 +162,6 @@ function askReq() {
         console.log("We recommend the LSLCG-100 Cruiser");
         alert("We recommend the LSLCG-100 Cruiser");
     }
-    output();
 }
  //asks how many years you want to rent the ship for
 function askRentalLength() {
@@ -190,7 +189,9 @@ function calculatePrice() {
     alert("Detected high-value ship rental. Redirecting to expensive ships section.");
         expensiveShips();
     }
-
+    else {
+        output();
+    }
 }
 //output function to display the final message
 function output() {
