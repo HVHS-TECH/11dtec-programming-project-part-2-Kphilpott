@@ -205,6 +205,7 @@ function output() {
 
 //Starts expensive ships section
 //This section is for ships that cost more than 10 million credits/dollars(NZD) to rent
+//please note this section was pain to create and had numerous bugs
 function expensiveShips() {
     Array = ["Cargo", "cargo", "Passenger", "passenger", "Military", "military", "luxury", "Luxury"];
     expPrices = [1000000, 1000000, 2000000, 2000000, 3000000, 3000000, 4000000, 4000000];
@@ -256,6 +257,11 @@ function calculatePriceEXP() {
 
 //output function to display the final message in the expensive ships section
 function outputEXP() {
+    if (totalexp > 100000000000000 ) {
+        console.log("Suspiciously high-value ship rental detected. Logging Space-Time coordinates, biodata and funds available.");
+        alert("Cannot process rental. Please contact Luna Starships support for assistance.");
+    }
+    
     console.log("Thank you for using Luna Starships, " + username + ". Your total rental cost is $" + totalexp + ".");
     alert("Thank you for using Luna Starships, " + username + ". Your total rental cost is $" + totalexp + ".");
     console.log("We hope to see you again soon!");
