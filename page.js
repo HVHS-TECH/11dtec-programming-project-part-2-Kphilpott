@@ -232,6 +232,7 @@ function expensiveShips() {
         console.log("We recommend the LSNZLSE-1000 'Elysium' Luxury Galaxy Cruiser");
         alert("We recommend the LSNZLSE-1000 'Elysium' Luxury Galaxy Cruiser");
     }
+    outputEXP();
 }
 
 function askRentalLengthEXP() {
@@ -252,7 +253,6 @@ function calculatePriceEXP() {
     totalexp = expPrices[shipIndexexp] * rentalLengthexp;
     console.log("The total cost for renting a", shipTypeexp, "ship for", rentalLengthexp, "years is $", totalexp);
     alert("The total cost for renting a " + shipTypeexp + " ship for " + rentalLengthexp + " years is $" + totalexp);
-    outputEXP();
 }
 
 function outputEXP() {
