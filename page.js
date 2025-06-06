@@ -4,7 +4,7 @@ this is the page
 *******************************************/
 
 console.log("lunastarships.custmr login successful");
-
+console.log("Initiating program...");
 
     //variables
 
@@ -74,6 +74,10 @@ else if (username == "Luxon") {
     console.log("slf-dstrct directive engaged.");
     process.exit(1);
 }
+else if (username == null) {
+    alert("Please enter a valid name");
+    console.log("Please enter a valid name");
+    askUserName();}
 }
 
    // Function to ask the user for the current year
@@ -114,7 +118,7 @@ function drivingAge() {
 }
 //start program. what, were you expecting more?
 function start() {
-   alert("Welcome to the starship rental interface. Minimum rental lengh is one (1) year.\nPlease note that you must be at least 25 years old to rent a ship.\n\nWARNING: Four (4) ship types avalible");
+   alert("Welcome to the starship rental interface. Minimum rental lengh is one (1) year.\nPlease note that you must be at least 25 years old to rent a ship.\n\nWARNING: Four (4) ship types avalable");
    askUserName();
    askYear();
    askUserAge();
@@ -124,64 +128,7 @@ function start() {
 if (age < 25) {
     console.log("You are not yet old enough to fly with us, please come back later.");}
 
-    if (username == "Christopher Luxon") {
-    alert("error.2025Lux (error0)");
-    console.log("error.2025Lux (error0)");
-    alert("error.2025Lux (error0)");
-    console.log("error.2025Lux (error0)");
-    alert("error.2025Lux (error0)");
-    console.log("error.2025Lux (error0)");
-    alert("error.2025Lux (error0)");
-    console.log("error.2025Lux (error0)");
-    alert("error.2025Lux (error0)");
-    console.log("error.2025Lux (error0)");
-    console.log("WARNING: Restricted user detected. Access denied.");
-    return;
-}
-else if (username == "Luxon") {
-    alert("error.2025Lux (error0)");
-    console.log("error.2025Lux (error0)");
-    alert("error.2025Lux (error0)");
-    console.log("error.2025Lux (error0)");
-    alert("error.2025Lux (error0)");
-    console.log("error.2025Lux (error0)");
-    alert("error.2025Lux (error0)");
-    console.log("error.2025Lux (error0)");
-    alert("error.2025Lux (error0)");
-    console.log("error.2025Lux (error0)");
-    console.log("WARNING: Restricted user detected. Access denied.");
-    return;
-}
-
- else if (username == "luxon") {
-    alert("error.2025Lux (error0)");
-    console.log("error.2025Lux (error0)");
-    alert("error.2025Lux (error0)");
-    console.log("error.2025Lux (error0)");
-    alert("error.2025Lux (error0)");
-    console.log("error.2025Lux (error0)");
-    alert("error.2025Lux (error0)");
-    console.log("error.2025Lux (error0)");
-    alert("error.2025Lux (error0)");
-    console.log("error.2025Lux (error0)");
-    console.log("WARNING: Restricted user detected. Access denied.");
-    return;
-}
-
- else if (username == "christopher luxon") {
-    alert("error.2025Lux (error0)");
-    console.log("error.2025Lux (error0)");
-    alert("error.2025Lux (error0)");
-    console.log("error.2025Lux (error0)");
-    alert("error.2025Lux (error0)");
-    console.log("error.2025Lux (error0)");
-    alert("error.2025Lux (error0)");
-    console.log("error.2025Lux (error0)");
-    alert("error.2025Lux (error0)");
-    console.log("error.2025Lux (error0)");
-    console.log("WARNING: Restricted user detected. Access denied.");
-    return;
-}
+   
  
 }
 
