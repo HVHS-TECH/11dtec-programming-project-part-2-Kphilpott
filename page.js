@@ -183,6 +183,9 @@ function calculatePrice() {
     total = basePrices[shipIndex] * rentalLength;
     console.log("The total cost for renting a", shipType, "ship for", rentalLength, "years is $", total);
     alert("The total cost for renting a " + shipType + " ship for " + rentalLength + " years is $" + total);
+
+    
+
 }
 //output function to display the final message
 function output() {
