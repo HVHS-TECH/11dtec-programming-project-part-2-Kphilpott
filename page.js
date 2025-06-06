@@ -162,6 +162,7 @@ function askReq() {
         console.log("We recommend the LSLCG-100 Cruiser");
         alert("We recommend the LSLCG-100 Cruiser");
     }
+    output();
 }
  //asks how many years you want to rent the ship for
 function askRentalLength() {
