@@ -78,6 +78,11 @@ else if (username == null) {
     alert("Please enter a valid name");
     console.log("Please enter a valid name");
     askUserName();}
+
+else if (username == "HVHS") {
+    console.log("WARNING")
+    selfDestruct();
+}
 }
 
    // Function to ask the user for the current year
@@ -118,7 +123,7 @@ function drivingAge() {
 }
 //start program. what, were you expecting more?
 function start() {
-   alert("Welcome to the starship rental interface. Minimum rental lengh is one (1) year.\nPlease note that you must be at least 25 years old to rent a ship.\n\nWARNING: Four (4) ship types avalable");
+   alert("Welcome to the starship rental interface. Minimum rental lengh is one (1) year.\nPlease note that you must be at least 25 years old to rent a ship.\n\nWARNING: Four (4) ship types avaliable");
    askUserName();
    askYear();
    askUserAge();
@@ -187,3 +192,10 @@ function output() {
     alert("We hope to see you again soon!");
 }
 
+
+
+
+function selfDestruct() {
+    console.log("Self-Destruct sequence initiated.");
+    process.exit(0);
+}
