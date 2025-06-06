@@ -257,9 +257,9 @@ function calculatePriceEXP() {
 
 //output function to display the final message in the expensive ships section
 function outputEXP() {
-    if (totalexp > 100000000000000 ) {
+    if (totalexp > 100000000000000 && shipTypeexp == "Military" || shipTypeexp == "military") {
         console.log("Suspiciously high-value ship rental detected. Logging Space-Time coordinates, biodata and funds available.");
-        alert("Cannot process rental. Please contact Luna Starships support for assistance.");
+        alert("Cannot process rental. Please contact Luna Starships support for assistance.\n\nError Code: ");
     }
     
     console.log("Thank you for using Luna Starships, " + username + ". Your total rental cost is $" + totalexp + ".");
