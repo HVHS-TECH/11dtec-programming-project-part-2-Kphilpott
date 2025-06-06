@@ -185,7 +185,9 @@ function calculatePrice() {
     alert("The total cost for renting a " + shipType + " ship for " + rentalLength + " years is $" + total);
 
     if (total > 10000000) {
-    expensiveShips();
+    console.log("Detected high-value ship rental. Redirecting to expensive ships section.");
+    alert("Detected high-value ship rental. Redirecting to expensive ships section.");
+        expensiveShips();
     }
 
 }
@@ -215,18 +217,32 @@ function expensiveShips() {
     }
     console.log("You have selected a", shipTypeexp, "ship.");
     askRentalLengthEXP();
+    if (shipType == "Cargo" || shipType == "cargo") {
+        console.log("We recommend the LSCXL998 Maximus Cargo Hauler.");
+        alert("We recommend the LSCXL998 Maximus Cargo Hauler.");
+    } else if (shipType == "Passenger" || shipType == "passenger") {
+        console.log("We recommend the NZICC Type 50 Intersystem Transport.");
+        alert("We recommend the NZICC Type 50 Intersystem Transport.");
+    } else if (shipType == "Military" || shipType == "military") {
+        console.log("We recommend the NZHS Type-V 'Imperium' Battlecruiser. (One Available)");
+        console.log("Suspicious purchase detected. Logging Space-Time coordinates, biodata and funds available.");
+        alert("We recommend the NZHS Type-V 'Imperium' Battlecruiser. (One Available)");
+    } else if (shipType == "Luxury" || shipType == "luxury") {
+        console.log("We recommend the LSNZLSE-1000 'Elysium' Luxury Galaxy Cruiser");
+        alert("We recommend the LSNZLSE-1000 'Elysium' Luxury Galaxy Cruiser");
+    }
 }
 
 function askRentalLengthEXP() {
-    rentalLengthexp = prompt("How long do you want to rent the ship for? (in years)", 1);
-    while (rentalLengthexp == null || isNaN(rentalLengthexp)) {
-        rentalLengthexp = prompt("Please enter a valid rental length", 1);
+    rentalLengthexp = prompt("How long do you want to rent the ship for? (in years)", 25);
+    while (rentalLengthexp == null || isNaN(rentalLengthexp)  || rentalLengthexp < 25) {
+        rentalLengthexp = prompt("Please enter a valid rental length", 25);
     }
     console.log("You have requested to rent the ship for", rentalLengthexp, "years.");
-    calculatePrice();
+    calculatePriceEXP();
 }
 
-function calculatePrice() {
+function calculatePriceEXP() {
     let shipIndexexp = Array.indexOf(shipTypeexp);
     if (shipIndexexp === -1) {
         alert("Invalid ship type selected.");
@@ -235,6 +251,12 @@ function calculatePrice() {
     totalexp = expPrices[shipIndexexp] * rentalLengthexp;
     console.log("The total cost for renting a", shipTypeexp, "ship for", rentalLengthexp, "years is $", totalexp);
     alert("The total cost for renting a " + shipTypeexp + " ship for " + rentalLengthexp + " years is $" + totalexp);
+    outputEXP();
+}
 
-
+function outputEXP() {
+    console.log("Thank you for using Luna Starships, " + username + ". Your total rental cost is $" + totalexp + ".");
+    alert("Thank you for using Luna Starships, " + username + ". Your total rental cost is $" + totalexp + ".");
+    console.log("We hope to see you again soon!");
+    alert("We hope to see you again soon!");
 }
