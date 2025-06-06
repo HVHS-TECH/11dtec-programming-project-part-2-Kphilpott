@@ -79,7 +79,7 @@ else if (username == "Luxon") {
    // Function to ask the user for the current year
 function askYear() {
     year = prompt("What year is it?", 2079);
-    while (year == null) {
+    while (year == null || isNaN(year)) {
         year = prompt("Please enter a valid year", 2079);
     }
     while (year < 2079) {
@@ -91,7 +91,7 @@ function askYear() {
 
 function askUserAge() {
     age = prompt("Please enter your age " + username, 25);
-   while (age == null) {
+   while (age == null || isNaN(age)) {
         age = prompt("Please enter a valid age", 25);
     }
 }
@@ -188,8 +188,8 @@ else if (username == "Luxon") {
 
  //asks what you need and recommends a ship based on the type
 function askReq() {
-    Array = ["Cargo", "Passenger", "Military", "Luxury"];
-    basePrices = [10000, 20000, 30000, 40000];
+    Array = ["Cargo", "cargo", "Passenger", "passenger", "Military", "military", "luxury", "Luxury"];
+    basePrices = [10000, 10000, 20000, 20000, 30000, 30000, 40000, 40000];
     alert("We have the following ship types available for rental: Cargo. Passenger. Military. Luxury", Array.join(", "));
     shipType = prompt("What type of ship would you like to rent? (Cargo, Passenger, Military, Luxury)", "Cargo");
     while (!Array.includes(shipType)) {
@@ -197,16 +197,16 @@ function askReq() {
     }
     console.log("You have selected a", shipType, "ship.");
     askRentalLength();
-    if (shipType == "Cargo"){
+    if (shipType == "Cargo" || shipType == "cargo") {
         console.log("We recommend the LSC78X Cargo Hauler.");
         alert("We recommend the LSC78X Cargo Hauler.");
-    } else if (shipType == "Passenger") {
+    } else if (shipType == "Passenger" || shipType == "passenger") {
         console.log("We recommend the LSPX-VII Transport.");
         alert("We recommend the LSPX-VII Transport.");
-    } else if (shipType == "Military") {
+    } else if (shipType == "Military" || shipType == "military") {
         console.log("We recommend the LSME-V Starfighter. (Low Supply)");
         alert("We recommend the LSME-V Starfighter. (Low Supply)");
-    } else if (shipType == "Luxury") {
+    } else if (shipType == "Luxury" || shipType == "luxury") {
         console.log("We recommend the LSLCG-100 Cruiser");
         alert("We recommend the LSLCG-100 Cruiser");
     }
