@@ -118,7 +118,7 @@ function drivingAge() {
     }
     else {
         alert("You are old enough to fly our ships, proceeding with rental process.");
-        askReq();
+        askEXP();
     }
 }
 //start program. what, were you expecting more?
@@ -138,12 +138,26 @@ if (age < 25) {
 }
 
 
+function askEXP() {
+    askEXPchoice = prompt("Would you like to reroute to the expensive ships? (yes/no)", "no");
+    if (askEXPchoice.toLowerCase() === "yes") {
+        expensiveShips();
+    } else if (askEXPchoice.toLowerCase() === "no") {
+        console.log("Opening normal ships rental section.");
+        alert("Opening normal ships rental section.");
+        askReq();
+    } else {
+        alert("Please enter a valid choice (yes/no)");
+        askEXP();
+    }
+}
+
  //asks what you need and recommends a ship based on the type
 function askReq() {
     Array = ["Cargo", "cargo", "Passenger", "passenger", "Military", "military", "luxury", "Luxury"];
     basePrices = [10000, 10000, 20000, 20000, 30000, 30000, 40000, 40000];
     alert("We have the following ship types available for rental: Cargo. Passenger. Military. Luxury", Array.join(", "));
-    shipType = prompt("What type of ship would you like to rent? (Cargo, Passenger, Military, Luxury)\nPlease note if above 10 million creadits/NZD the program will reroute to expensive ships selection.", "Cargo");
+    shipType = prompt("What type of ship would you like to rent? (Cargo, Passenger, Military, Luxury)\nPlease note if above 10 million credits/NZD the program will reroute to expensive ships selection.", "Cargo");
     while (!Array.includes(shipType)) {
         shipType = prompt("Please enter a valid ship type (Cargo, Passenger, Military, Luxury)", "Cargo");
     }
@@ -173,7 +187,7 @@ function askRentalLength() {
     console.log("You have requested to rent the ship for", rentalLength, "years.");
     calculatePrice();
 }
-
+                 
 //figures out the price of the ship based on the type and rental length, detects high-value buy/rent attempts and redirects to expensive ships section if needed
 function calculatePrice() {
     let shipIndex = Array.indexOf(shipType);
@@ -184,15 +198,7 @@ function calculatePrice() {
     total = basePrices[shipIndex] * rentalLength;
     console.log("The total cost for renting a", shipType, "ship for", rentalLength, "years is $", total);
     alert("The total cost for renting a " + shipType + " ship for " + rentalLength + " years is $" + total);
-
-    if (total > 10000000) {
-    console.log("Detected high-value ship rental. Redirecting to expensive ships section.");
-    alert("Detected high-value ship rental. Redirecting to expensive ships section.");
-        expensiveShips();
-    }
-    else {
-        output();
-    }
+    output();
 }
 
 //output function to display the final message
@@ -262,11 +268,12 @@ function outputEXP() {
         console.log("Suspiciously high-value ship rental detected. Logging Space-Time coordinates, biodata and funds available.");
         alert("Cannot process rental. Please contact Luna Starships support for assistance.\n\nError Code: ᕊ|:ᒍᔮ·ǀ·ᒷ↸.ϟ⚍ϟ.ᔮϟᒣᒍᒲ∷ᑕ|:⚍リϟᒣ∷ϟ⍑i!ᔮᒍ∷ᒷᑐ");
     }
-    
-    console.log("Thank you for using Luna Starships, " + username + ". Your total rental cost is $" + totalexp + ".");
+    else {
+      console.log("Thank you for using Luna Starships, " + username + ". Your total rental cost is $" + totalexp + ".");
     alert("Thank you for using Luna Starships, " + username + ". Your total rental cost is $" + totalexp + ".");
     console.log("We hope to see you again soon!");
     alert("We hope to see you again soon!");
+    }
 }
 
 
