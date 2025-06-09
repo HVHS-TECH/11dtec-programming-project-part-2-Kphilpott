@@ -148,7 +148,7 @@ function askReq() {
         shipType = prompt("Please enter a valid ship type (Cargo, Passenger, Military, Luxury)", "Cargo");
     }
     console.log("You have selected a", shipType, "ship.");
-    askRentalLength();
+    
     if (shipType == "Cargo" || shipType == "cargo") {
         console.log("We recommend the LSC78X Cargo Hauler.");
         alert("We recommend the LSC78X Cargo Hauler.");
@@ -162,6 +162,7 @@ function askReq() {
         console.log("We recommend the LSLCG-100 Cruiser");
         alert("We recommend the LSLCG-100 Cruiser");
     }
+    askRentalLength();
 }
  //asks how many years you want to rent the ship for
 function askRentalLength() {
@@ -207,26 +208,26 @@ function output() {
 //This section is for ships that cost more than 10 million credits/dollars(NZD) to rent
 //please note this section was pain to create and had numerous bugs
 function expensiveShips() {
-    Array = ["Cargo", "cargo", "Passenger", "passenger", "Military", "military", "luxury", "Luxury"];
+    Array = ["CargoL", "cargol", "PassengerL", "passengerl", "MilitaryL", "militaryl", "luxuryL", "Luxuryl"];
     expPrices = [1000000, 1000000, 2000000, 2000000, 3000000, 3000000, 4000000, 4000000];
     alert("We have the following ship types available for rental: Cargo. Passenger. Military. Luxury", Array.join(", "));
-    shipTypeexp = prompt("What type of ship would you like to rent? (Cargo, Passenger, Military, Luxury)", "Cargo");
+    shipTypeexp = prompt("What type of ship would you like to rent? (CargoL, PassengerL, MilitaryL, LuxuryL)", "CargoL");
     while (!Array.includes(shipTypeexp)) {
-        shipTypeexp = prompt("Please enter a valid ship type (Cargo, Passenger, Military, Luxury)", "Cargo");
+        shipTypeexp = prompt("Please enter a valid ship type (CargoL, PassengerL, MilitaryL, LuxuryL)", "CargoL");
     }
     console.log("You have selected a", shipTypeexp, "ship.");
     askRentalLengthEXP();
-    if (shipTypeexp == "Cargo" || shipTypeexp == "cargo") {
+    if (shipTypeexp == "CargoL" || shipTypeexp == "cargol") {
         console.log("We recommend the LSCXL998 Maximus Cargo Hauler.");
         alert("We recommend the LSCXL998 Maximus Cargo Hauler.");
-    } else if (shipTypeexp == "Passenger" || shipTypeexp == "passenger") {
+    } else if (shipTypeexp == "PassengerL" || shipTypeexp == "passengerl") {
         console.log("We recommend the NZICC Type 50 Intersystem Transport.");
         alert("We recommend the NZICC Type 50 Intersystem Transport.");
-    } else if (shipTypeexp == "Military" || shipTypeexp == "military") {
+    } else if (shipTypeexp == "MilitaryL" || shipTypeexp == "militaryl") {
         console.log("We recommend the NZHS Type-V 'Imperium' Battlecruiser. (One Available)");
         console.log("Suspicious purchase detected. Logging Space-Time coordinates, biodata and funds available.");
         alert("We recommend the NZHS Type-V 'Imperium' Battlecruiser. (One Available)");
-    } else if (shipTypeexp == "Luxury" || shipTypeexp == "luxury") {
+    } else if (shipTypeexp == "LuxuryL" || shipTypeexp == "luxuryl") {
         console.log("We recommend the LSNZLSE-1000 'Elysium' Luxury Galaxy Cruiser");
         alert("We recommend the LSNZLSE-1000 'Elysium' Luxury Galaxy Cruiser");
     }
@@ -257,7 +258,7 @@ function calculatePriceEXP() {
 
 //output function to display the final message in the expensive ships section
 function outputEXP() {
-    if (totalexp > 1000000000 && shipTypeexp == "Military" || shipTypeexp == "military") {
+    if (totalexp > 1000000000 && shipTypeexp == "MilitaryL" || shipTypeexp == "militaryl") {
         console.log("Suspiciously high-value ship rental detected. Logging Space-Time coordinates, biodata and funds available.");
         alert("Cannot process rental. Please contact Luna Starships support for assistance.\n\nError Code: ᕊ|:ᒍᔮ·ǀ·ᒷ↸.ϟ⚍ϟ.ᔮϟᒣᒍᒲ∷ᑕ|:⚍リϟᒣ∷ϟ⍑i!ᔮᒍ∷ᒷᑐ");
     }
