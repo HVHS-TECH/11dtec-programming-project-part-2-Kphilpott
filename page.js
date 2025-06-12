@@ -206,7 +206,7 @@ function output() {
     console.log("Thank you for using Luna Starships, " + username + ". Your total rental cost is $" + total + ".");
     alert("Thank you for using Luna Starships, " + username + ". Your total rental cost is $" + total + ".");
     console.log("We hope to see you again soon!");
-    alert("We hope to see you again soon!");
+    alert("We hope to see you again soon!\n\n© Luna Starships 2079 || Last Updated: 23.11.2079");
 }
 
 
@@ -272,7 +272,7 @@ function outputEXP() {
       console.log("Thank you for using Luna Starships, " + username + ". Your total rental cost is $" + totalexp + ".");
     alert("Thank you for using Luna Starships, " + username + ". Your total rental cost is $" + totalexp + ".");
     console.log("We hope to see you again soon!");
-    alert("We hope to see you again soon!");
+    alert("We hope to see you again soon!\n\n© Luna Starships 2079 || Last Updated: 23.11.2079");
     }
 }
 
