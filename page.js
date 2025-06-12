@@ -123,7 +123,7 @@ function drivingAge() {
 }
 //start program. what, were you expecting more?
 function start() {
-   alert("Welcome to the starship rental interface. Minimum rental lengh is one (1) year.\nPlease note that you must be at least 25 years old to rent a ship.\n\nFour (4) ship types avaliable in normal section.\nFour (4) ships types avaliable in expensive catalog.");
+   alert("Welcome to the starship rental interface. Minimum rental lengh is one (1) year.\nPlease note that you must be at least 25 years old to rent a ship.\n\nFour (4) ship types avaliable in normal section.\nFour (4) ships types avaliable in expensive catalog.\n\n\n© Luna Starships 2079 || Last Updated: 23.11.2079");
    askUserName();
    askYear();
    askUserAge();
