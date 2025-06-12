@@ -130,14 +130,7 @@ function start() {
    ageMaths();
    drivingAge();
 
-if (age < 25) {
-    console.log("You are not yet old enough to fly with us, please come back later.");}
-
-   
- 
 }
-
-
 function askEXP() {
     askEXPchoice = prompt("Would you like to reroute to the expensive ships? (yes/no)", "no");
     if (askEXPchoice.toLowerCase() === "yes") {
