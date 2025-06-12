@@ -157,7 +157,7 @@ function askReq() {
     Array = ["Cargo", "cargo", "Passenger", "passenger", "Military", "military", "luxury", "Luxury"];
     basePrices = [10000, 10000, 20000, 20000, 30000, 30000, 40000, 40000];
     alert("We have the following ship types available for rental: Cargo. Passenger. Military. Luxury", Array.join(", "));
-    shipType = prompt("What type of ship would you like to rent? (Cargo, Passenger, Military, Luxury)\nPlease note if above 10 million credits/NZD the program will reroute to expensive ships selection.", "Cargo");
+    shipType = prompt("What type of ship would you like to rent? (Cargo, Passenger, Military, Luxury)", "Cargo");
     while (!Array.includes(shipType)) {
         shipType = prompt("Please enter a valid ship type (Cargo, Passenger, Military, Luxury)", "Cargo");
     }
@@ -217,9 +217,9 @@ function expensiveShips() {
     Array = ["CargoL", "cargol", "PassengerL", "passengerl", "MilitaryL", "militaryl", "luxuryL", "Luxuryl"];
     expPrices = [1000000, 1000000, 2000000, 2000000, 3000000, 3000000, 4000000, 4000000];
     alert("We have the following ship types available for rental: Cargo. Passenger. Military. Luxury", Array.join(", "));
-    shipTypeexp = prompt("What type of ship would you like to rent? (CargoL, PassengerL, MilitaryL, LuxuryL)", "CargoL");
+    shipTypeexp = prompt("What type of ship would you like to rent? (CargoL, PassengerL, MilitaryL, LuxuryL)\nPlease check for Capitals Lock", "CargoL");
     while (!Array.includes(shipTypeexp)) {
-        shipTypeexp = prompt("Please enter a valid ship type (CargoL, PassengerL, MilitaryL, LuxuryL)", "CargoL");
+        shipTypeexp = prompt("Please enter a valid ship type (CargoL, PassengerL, MilitaryL, LuxuryL)\nPlease check for Capitals Lock", "CargoL");
     }
     console.log("You have selected a", shipTypeexp, "ship.");
     askRentalLengthEXP();
