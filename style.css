@@ -9,14 +9,6 @@ body {
   margin: 0; /* Remove margin to perfectly center */
 }
 
-.h1 {
-  align-items: center;
-  margin: 0;
-}
-
-.h3 {
-  align-items: center;
-}
 
 .w3-container {
   text-align: center; /* Center text and button inside the container */
