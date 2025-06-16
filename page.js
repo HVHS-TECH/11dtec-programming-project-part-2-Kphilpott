@@ -279,6 +279,12 @@ function outputEXP() {
 
 
 
+function getFormInput() {
+    var message = "Welcome to the page ";
+    message = message + input_name.value;
+    welcomeMessage.innerHTML = message;
+}
+
 
 
 
