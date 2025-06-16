@@ -129,7 +129,9 @@ function start() {
     document.getElementById("startpage").innerHTML = "<h1>Welcome to Luna Starships: Rental Division</h1><h3>Your Leader in Space Travel & Rentals since 2079</h3>";
     document.getElementById("mainbutton").innerHTML = '<button class="w3-button w3-????????? w3-xxlarge" type="button"      onclick="start() ;">START</button>'
     alert("Welcome to the starship rental interface. Minimum rental lengh is one (1) year.\nPlease note that you must be at least 25 years old to rent a ship.\n\nFour (4) ship types avaliable in normal section.\nFour (4) ships types avaliable in expensive catalog.\n\n\n© Luna Starships 2079 || Last Updated: 23.11.2079");
-  /*
+    buildDropdown();
+ 
+    /*
     askUserName();
    askYear();
    askUserAge();
@@ -279,6 +281,31 @@ function outputEXP() {
 
 
 
+
+function getFormInput() {
+    var message = "Welcome to the page ";
+    message = message + input_name.value;
+    welcomeMessage.innerHTML = message;
+}
+
+
+
+function getSelectInput() {
+    var message = "Welcome to the page ";
+    message = message + input_name.value;
+    message = message + ". You chose " + cars.value
+    welcomeMessage.innerHTML = message;
+
+    cars.innerHTML += '<option value="BYD">BYD</option>'
+}
+
+listOfFruit = ['strawberries', 'kiwifruit', 'fejoas', 'kiwana'];
+function buildDropdown() {
+    for (i = 0; i < listOfFruit.length; i++) {
+        var newOption = '<option value="' + listOfFruit[i] + '">' + listOfFruit[i] + '</option>';
+        fruitSelect.innerHTML += newOption;
+    }
+}
 
 
 
