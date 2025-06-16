@@ -39,13 +39,13 @@ console.log()
    // Function to ask the user for their name, check if restricted, and crash the program if restricted
 var username;
 function askUserName() {
-    var message = "Welcome to the page ";
+    username = document.getElementById("username");
     message = message + username.value;
     welcomeMessage.innerHTML = message;
-    document.getElementById("startpage").innerHTML = '<h3 id="welcomeMessage"></h3><form onsubmit="return false;" id="NameForm"> <label>Name:</label><br> <input type="text" id="username" value="User"> <br><br> <input type="submit" onclick="getFormInput()"> </form>'
-    username = prompt("Welcome to Luna Starships! \nWhat is your name?", "User");
+    document.getElementById("startpage").innerHTML = '<h3 id="username"></h3><form onsubmit="return false;" id="NameForm"> <label>Name:</label><br> <input type="text" id="username" value="User"> <br><br> <input type="submit" onclick="getFormInput()"> </form>'
    while (username == null) {
-        username = prompt("Please enter a valid name", "User");
+            document.getElementById("startpage").innerHTML = '<h3 id="username"></h3><form onsubmit="return false;" id="NameForm"> <label>Name:</label><br> <input type="text" id="username" value="User"> <br><br> <input type="submit" onclick="getFormInput()"> </form>'
+
     }
     console.log("Hello",username,);
     if (username == "Christopher Luxon") {
@@ -284,11 +284,7 @@ function outputEXP() {
 
 
 
-function getFormInput() {
-    var message = "Welcome to the page ";
-    message = message + input_name.value;
-    welcomeMessage.innerHTML = message;
-}
+
 
 
 
