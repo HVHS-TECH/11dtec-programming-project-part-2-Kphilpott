@@ -39,9 +39,7 @@ console.log()
    // Function to ask the user for their name, check if restricted, and crash the program if restricted
 var username;
 function askUserName() {
-    var message = "Welcome to the page ";
-    message = message + username.value;
-    welcomeMessage.innerHTML = message;
+document.getElementById("startpage").innerHTML = "test";
     username = prompt("Welcome to Luna Starships! \nWhat is your name?", "User");
    while (username == null) {
         username = prompt("Please enter a valid name", "User");
@@ -130,7 +128,7 @@ function start() {
     document.getElementById("startimg").style.display = "none";
     
     document.getElementById("startpage").innerHTML = "<h1>Welcome to Luna Starships: Rental Division</h1><h3>Your Leader in Space Travel & Rentals since 2079</h3>";
-    document.getElementById("mainbutton").innerHTML = '<button class="w3-button w3-????????? w3-xxlarge" type="button"      onclick="start() ;">START</button>'
+    document.getElementById("mainbutton").innerHTML = '<button class="w3-button w3-????????? w3-xxlarge" type="button"      onclick="start() ;">START</button>';
     alert("Welcome to the starship rental interface. Minimum rental lengh is one (1) year.\nPlease note that you must be at least 25 years old to rent a ship.\n\nFour (4) ship types avaliable in normal section.\nFour (4) ships types avaliable in expensive catalog.\n\n\n© Luna Starships 2079 || Last Updated: 23.11.2079");
     buildDropdown();
  
