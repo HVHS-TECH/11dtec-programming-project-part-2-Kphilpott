@@ -21,7 +21,7 @@ const DRIVINGAGE = 25;
 /*******************************************
  Main Code
  ******************************************/
- 
+ document.getElementById("nameInput").style.display = "none";
 
 
 
