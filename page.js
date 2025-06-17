@@ -37,9 +37,17 @@ console.log()
  Functions
  *******************************************/
    // Function to ask the user for their name, check if restricted, and crash the program if restricted
-var username;
+function getFormInput() {
+    var message = "Welcome to the page ";
+    message = message + input_name.value;
+    welcomeMessage.innerHTML = message;
+}
+
+
+
+   var username;
 function askUserName() {
-document.getElementById("startpage").innerHTML = "test";
+document.getElementById("startpage").innerHTML = "<h1>11DTEC select example</h1><h3 id="welcomeMessage"></h3><form onsubmit="return false;"><label>Name:</label><br><input type="text" id="input_name" value="Mr Bob"> <br><br><input type="submit" onclick="getFormInput()"></form>";
     username = prompt("Welcome to Luna Starships! \nWhat is your name?", "User");
    while (username == null) {
         username = prompt("Please enter a valid name", "User");
