@@ -39,7 +39,8 @@ console.log()
    // Function to ask the user for their name, check if restricted, and crash the program if restricted
 var username;
 function askUserName() {
-document.getElementById("startpage").innerHTML = "test";
+document.getElementById("nameInput").style.display = "";
+    document.getElementById("startpage").innerHTML = "test";
     username = prompt("Welcome to Luna Starships! \nWhat is your name?", "User");
    while (username == null) {
         username = prompt("Please enter a valid name", "User");
