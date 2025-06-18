@@ -21,7 +21,7 @@ const DRIVINGAGE = 25;
 /*******************************************
  Main Code
  ******************************************/
-
+document.getElementById("nameInput").style.display = "none";
 
 
 
@@ -39,7 +39,6 @@ console.log()
    // Function to ask the user for their name, check if restricted, and crash the program if restricted
 var username;
 function askUserName() {
-document.getElementById("nameInput").style.display = "";
     document.getElementById("startpage").innerHTML = "test";
     username = prompt("Welcome to Luna Starships! \nWhat is your name?", "User");
    while (username == null) {
