@@ -39,12 +39,15 @@ console.log()
    // Function to ask the user for their name, check if restricted, and crash the program if restricted
 var username;
 function askUserName() {
-    document.getElementById("startpage").innerHTML = "test";
+    document.getElementById("startpage").innerHTML = "Please enter your name to continue, or if you wish to remain anonymous, click submit now";
     document.getElementById("nameInput").style.display = "block";
     (username = input_name.value)
    while (username == null) {
         username = prompt("Please enter a valid name", "User");
     }
+    var message = "Welcome to the page ";
+    message = message + input_name.value;
+    welcomeMessage.innerHTML = message;
     if (username == "Christopher Luxon") {
     alert("error.2025Lux (error0)");
     console.log("error.2025Lux (error0)");
