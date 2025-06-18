@@ -39,8 +39,6 @@ console.log()
    // Function to ask the user for their name, check if restricted, and crash the program if restricted
 var username;
 function askUserName() {
-    document.getElementById("startpage").innerHTML = "Please enter your name to continue, or if you wish to remain anonymous, click submit now";
-    document.getElementById("nameInput").style.display = "block";
     (username = input_name.value)
     while (username == null) {
         username = prompt("Please enter a valid name", "User");
@@ -126,6 +124,12 @@ function drivingAge() {
         askEXP();
     }
 }
+
+function nameForm() {
+    document.getElementById("startpage").innerHTML = "Please enter your name to continue, or if you wish to remain anonymous, click submit now";
+    document.getElementById("nameInput").style.display = "block";
+}
+
 //start program. what, were you expecting more?
 function start() {
     
@@ -135,8 +139,9 @@ function start() {
     alert("Welcome to the starship rental interface. Minimum rental lengh is one (1) year.\nPlease note that you must be at least 25 years old to rent a ship.\n\nFour (4) ship types avaliable in normal section.\nFour (4) ships types avaliable in expensive catalog.\n\n\n© Luna Starships 2079 || Last Updated: 23.11.2079");
  
    
-    askUserName();
-     /*
+   nameForm();
+    /*
+   askUserName();
    askYear();
    askUserAge();
    ageMaths();
