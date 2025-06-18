@@ -41,11 +41,10 @@ var username;
 function askUserName() {
     document.getElementById("startpage").innerHTML = "test";
     document.getElementById("nameInput").style.display = "block";
-    (username = input_name)
+    (username = input_name.value)
    while (username == null) {
         username = prompt("Please enter a valid name", "User");
     }
-    console.log("Hello",username,);
     if (username == "Christopher Luxon") {
     alert("error.2025Lux (error0)");
     console.log("error.2025Lux (error0)");
