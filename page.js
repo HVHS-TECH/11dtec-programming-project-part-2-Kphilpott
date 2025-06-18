@@ -41,7 +41,7 @@ var username;
 function askUserName() {
     document.getElementById("startpage").innerHTML = "test";
     document.getElementById("nameInput").style.display = "block";
-    username = prompt("Welcome to Luna Starships! \nWhat is your name?", "User");
+    (username = input_name)
    while (username == null) {
         username = prompt("Please enter a valid name", "User");
     }
