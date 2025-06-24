@@ -47,14 +47,7 @@ function askUserName() {
         username = prompt("Please enter a valid name", "User");
     }
     console.log("Hello",username,);
-    if (username == "Christopher Luxon") {
-    alert("error.2025Lux (error0)");
-    console.log("error.2025Lux (error0)");
-    console.log("WARNING: Restricted user detected. Access denied.");
-    console.log("slf-dstrct directive engaged.");
-    process.exit(1);
-}
-else if (username == "Luxon") {
+    if (username == "luxon" || username == "christopher luxon" || username == "Luxon" || username == "Christopher Luxon") {
     alert("error.2025Lux (error0)");
     console.log("error.2025Lux (error0)");
     console.log("WARNING: Restricted user detected. Access denied.");
@@ -62,25 +55,16 @@ else if (username == "Luxon") {
     process.exit(1);
 }
 
- else if (username == "luxon") {
-    alert("error.2025Lux (error0)");
-    console.log("error.2025Lux (error0)");
-    console.log("WARNING: Restricted user detected. Access denied.");
-    console.log("slf-dstrct directive engaged.");
+else if (username == "Ben Britian") {
+    console.log("ERR.codebreaker");
     process.exit(1);
 }
 
- else if (username == "christopher luxon") {
-    alert("error.2025Lux (error0)");
-    console.log("error.2025Lux (error0)");
-    console.log("WARNING: Restricted user detected. Access denied.");
-    console.log("slf-dstrct directive engaged.");
-    process.exit(1);
-}
 else if (username == null) {
     alert("Please enter a valid name");
     console.log("Please enter a valid name");
-    askUserName();}
+    askUserName();
+}
 
 else if (username == "HVHS") {
     console.log("WARNING")
