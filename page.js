@@ -3,6 +3,9 @@
 this is the page 
 *******************************************/
 
+console.log("CODE REPAIR... COMPLETE");
+console.log("DAMAGED CODE REMOVED: HTML EDITING JS CODE, HTML FORMS");
+console.log("USED REPAIR TEMPLATE: 13.06.2025-OLD");
 console.log("lunastarships.custmr login successful");
 console.log("Initiating program...");
 
