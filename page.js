@@ -21,7 +21,7 @@ const DRIVINGAGE = 25;
 /*******************************************
  Main Code
  ******************************************/
-
+ 
 
 
 
@@ -39,53 +39,50 @@ console.log()
    // Function to ask the user for their name, check if restricted, and crash the program if restricted
 var username;
 function askUserName() {
-    (username = input_name.value)
-    while (username == null) {
+    username = prompt("Welcome to Luna Starships! \nWhat is your name?", "User");
+   while (username == null) {
         username = prompt("Please enter a valid name", "User");
     }
-    var message = "Welcome to the page ";
-    message = message + input_name.value;
-    welcomeMessage.innerHTML = message;
+    console.log("Hello",username,);
     if (username == "Christopher Luxon") {
-        alert("error.2025Lux (error0)");
-        console.log("error.2025Lux (error0)");
-        console.log("WARNING: Restricted user detected. Access denied.");
-        console.log("slf-dstrct directive engaged.");
-        process.exit(1);
-    }
-    else if (username == "Luxon") {
-        alert("error.2025Lux (error0)");
-        console.log("error.2025Lux (error0)");
-        console.log("WARNING: Restricted user detected. Access denied.");
-        console.log("slf-dstrct directive engaged.");
-        process.exit(1);
-    }
+    alert("error.2025Lux (error0)");
+    console.log("error.2025Lux (error0)");
+    console.log("WARNING: Restricted user detected. Access denied.");
+    console.log("slf-dstrct directive engaged.");
+    process.exit(1);
+}
+else if (username == "Luxon") {
+    alert("error.2025Lux (error0)");
+    console.log("error.2025Lux (error0)");
+    console.log("WARNING: Restricted user detected. Access denied.");
+    console.log("slf-dstrct directive engaged.");
+    process.exit(1);
+}
 
-    else if (username == "luxon") {
-        alert("error.2025Lux (error0)");
-        console.log("error.2025Lux (error0)");
-        console.log("WARNING: Restricted user detected. Access denied.");
-        console.log("slf-dstrct directive engaged.");
-        process.exit(1);
-    }
+ else if (username == "luxon") {
+    alert("error.2025Lux (error0)");
+    console.log("error.2025Lux (error0)");
+    console.log("WARNING: Restricted user detected. Access denied.");
+    console.log("slf-dstrct directive engaged.");
+    process.exit(1);
+}
 
-    else if (username == "christopher luxon") {
-        alert("error.2025Lux (error0)");
-        console.log("error.2025Lux (error0)");
-        console.log("WARNING: Restricted user detected. Access denied.");
-        console.log("slf-dstrct directive engaged.");
-        process.exit(1);
-    }
-    else if (username == null) {
-        alert("Please enter a valid name");
-        console.log("Please enter a valid name");
-        askUserName();
-    }
+ else if (username == "christopher luxon") {
+    alert("error.2025Lux (error0)");
+    console.log("error.2025Lux (error0)");
+    console.log("WARNING: Restricted user detected. Access denied.");
+    console.log("slf-dstrct directive engaged.");
+    process.exit(1);
+}
+else if (username == null) {
+    alert("Please enter a valid name");
+    console.log("Please enter a valid name");
+    askUserName();}
 
-    else if (username == "HVHS") {
-        console.log("WARNING")
-        selfDestruct();
-    }
+else if (username == "HVHS") {
+    console.log("WARNING")
+    selfDestruct();
+}
 }
 
    // Function to ask the user for the current year
@@ -124,29 +121,15 @@ function drivingAge() {
         askEXP();
     }
 }
-
-function nameForm() {
-    document.getElementById("startpage").innerHTML = "Please enter your name to continue, or if you wish to remain anonymous, click submit now";
-    document.getElementById("nameInput").style.display = "block";
-}
-
 //start program. what, were you expecting more?
 function start() {
-    
-    document.getElementById("startimg").style.display = "none";
-    
-    document.getElementById("startpage").innerHTML = "<h1>Welcome to Luna Starships: Rental Division</h1><h3>Your Leader in Space Travel & Rentals since 2079</h3>";
-    alert("Welcome to the starship rental interface. Minimum rental lengh is one (1) year.\nPlease note that you must be at least 25 years old to rent a ship.\n\nFour (4) ship types avaliable in normal section.\nFour (4) ships types avaliable in expensive catalog.\n\n\n© Luna Starships 2079 || Last Updated: 23.11.2079");
- 
-   
-   nameForm();
-    /*
+   alert("Welcome to the starship rental interface. Minimum rental lengh is one (1) year.\nPlease note that you must be at least 25 years old to rent a ship.\n\nFour (4) ship types avaliable in normal section.\nFour (4) ships types avaliable in expensive catalog.\n\n\n© Luna Starships 2079 || Last Updated: 23.11.2079");
    askUserName();
    askYear();
    askUserAge();
    ageMaths();
    drivingAge();
-  */
+
 }
 function askEXP() {
     askEXPchoice = prompt("Would you like to reroute to the expensive ships? (yes/no)", "no");
@@ -288,11 +271,7 @@ function outputEXP() {
 
 
 
-function getFormInput() {
-    var message = "Welcome to the page ";
-    message = message + input_name.value;
-    welcomeMessage.innerHTML = message;
-}
+
 
 
 
