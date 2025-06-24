@@ -57,7 +57,7 @@ function askUserName() {
         process.exit(1);
 }
 
-else if (username == "Ben Britian") {
+else if (username == "Ben Britian" || username == "ben britian" || username == "BEN BRITIAN" || username == "Ben Britian") {
     console.log("Banned Client Detected");
     console.log("ERR.codebreaker");
     process.exit(1);
