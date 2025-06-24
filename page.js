@@ -47,15 +47,18 @@ function askUserName() {
         username = prompt("Please enter a valid name", "User");
     }
     console.log("Hello",username,);
+    console.log("Checking for banned clients...");
     if (username == "luxon" || username == "christopher luxon" || username == "Luxon" || username == "Christopher Luxon") {
-    alert("error.2025Lux (error0)");
-    console.log("error.2025Lux (error0)");
-    console.log("WARNING: Restricted user detected. Access denied.");
-    console.log("slf-dstrct directive engaged.");
-    process.exit(1);
+        console.log("Banned Client Detected");
+        alert("error.2025Lux (error0)");
+        console.log("error.2025Lux (error0)");
+        console.log("WARNING: Restricted user detected. Access denied.");
+        console.log("slf-dstrct directive engaged.");
+        process.exit(1);
 }
 
 else if (username == "Ben Britian") {
+    console.log("Banned Client Detected");
     console.log("ERR.codebreaker");
     process.exit(1);
 }
