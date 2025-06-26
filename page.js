@@ -198,7 +198,7 @@ function output() {
 //This section is for ships that cost more than 10 million credits/dollars(NZD) to rent
 //please note this section was pain to create and had numerous bugs
 function expensiveShips() {
-    Array = ["CargoL", "cargol", "PassengerL", "passengerl", "MilitaryL", "militaryl", "luxuryL", "Luxuryl"];
+    Array = ["CargoL", "cargol", "PassengerL", "passengerl", "MilitaryL", "militaryl", "LuxuryL", "luxuryl"];
     expPrices = [1000000, 1000000, 2000000, 2000000, 3000000, 3000000, 4000000, 4000000];
     alert("We have the following ship types available for rental: Cargo. Passenger. Military. Luxury", Array.join(", "));
     shipTypeexp = prompt("What type of ship would you like to rent? (CargoL, PassengerL, MilitaryL, LuxuryL)\nPlease check for Capitals Lock", "CargoL");
