@@ -77,12 +77,12 @@ else if (username == "HVHS") {
 
    // Function to ask the user for the current year
 function askYear() {
-    year = prompt("What year is it?", 2079);
+    year = prompt("What year is it?", 2080);
     while (year == null || isNaN(year)) {
-        year = prompt("Please enter a valid year", 2079);
+        year = prompt("Please enter a valid year", 2080);
     }
-    while (year < 2079) {
-        year = prompt("Please enter a valid year", 2079);
+    while (year < 2080) {
+        year = prompt("Please enter a valid year", 2080);
     }
 }
 
@@ -190,7 +190,7 @@ function output() {
     console.log("Thank you for using Luna Starships, " + username + ". Your total rental cost is $" + total + ".");
     alert("Thank you for using Luna Starships, " + username + ". Your total rental cost is $" + total + ".");
     console.log("We hope to see you again soon!");
-    alert("We hope to see you again soon!\n\n© Luna Starships 2079 || Last Updated: 23.11.2079");
+    alert("We hope to see you again soon!\n\n© Luna Starships 2079 || Last Updated: 25.06.2080");
 }
 
 
@@ -256,7 +256,7 @@ function outputEXP() {
       console.log("Thank you for using Luna Starships, " + username + ". Your total rental cost is $" + totalexp + ".");
     alert("Thank you for using Luna Starships, " + username + ". Your total rental cost is $" + totalexp + ".");
     console.log("We hope to see you again soon!");
-    alert("We hope to see you again soon!\n\n© Luna Starships 2079 || Last Updated: 23.11.2079");
+    alert("We hope to see you again soon!\n\n© Luna Starships 2079 || Last Updated: 25.06.2080");
     }
 }
 
