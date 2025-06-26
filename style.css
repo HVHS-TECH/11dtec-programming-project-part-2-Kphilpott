@@ -42,8 +42,6 @@ button:hover {
   background-color: #0056b3;
 }
 
-h1, h3, p, small {
+h1, h3, p{
   text-align: center;
 }
-
-
