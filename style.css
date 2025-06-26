@@ -31,7 +31,7 @@ button {
   cursor: pointer;
   border: none;
   border-radius: 5px;
-  background-color: #555555;
+  background-color: #008500;
   color: #fff;
   transition: background-color 0.3s;
   width: 220px; /* Set a fixed width */
