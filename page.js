@@ -65,7 +65,7 @@ else if (username == "Ben Britian" || username == "ben britian" || username == "
 
 else if (username == null) {
     alert("Please enter a valid name");
-    console.log("Please enter a valid name");
+    console.log("User did not enter a valid name");
     askUserName();
 }
 
