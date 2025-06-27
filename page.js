@@ -82,7 +82,7 @@ function askYear() {
         year = prompt("Please enter a valid year", 2080);
     }
     while (year < 2080) {
-        year = prompt("Please enter a valid year", 2080);
+        year = prompt("Please enter a valid year, minimum is year 2080", 2080);
     }
 }
 
@@ -91,12 +91,12 @@ function askYear() {
 function askUserAge() {
     age = prompt("Please enter your age " + username, 25);
    while (age == null || isNaN(age)) {
-        age = prompt("Please enter a valid age", 25);
+        age = prompt("Please enter a valid age in numbers", 25);
     }
 }
 
 function ageMaths() {
-    console.log("You were born in" ,year - age)
+    console.log("User was born in" ,year - age)
 }
 
     // Function to check if the user is old enough to pilot a ship
